@@ -60,7 +60,8 @@ a{color:var(--accent-ink)}
 header.site{background:var(--hdr);position:sticky;top:0;z-index:50}
 .hrow{display:flex;align-items:center;gap:16px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:11px;margin-right:auto;text-decoration:none;color:inherit;min-width:0}
-.mark{width:5px;align-self:stretch;min-height:32px;background:var(--hl);border-radius:99px;flex:none}
+.mark{width:5px;align-self:stretch;min-height:32px;background:var(--hl);border-radius:99px;flex:none;
+  overflow:hidden;font-size:0;line-height:0}
 .brand .txt{display:block;min-width:0}
 .brand{color:var(--hdr-ink)}
 .brand .txt b{font-family:var(--display);font-size:17px;font-weight:800;letter-spacing:-.02em;display:block;
@@ -244,7 +245,7 @@ footer.site a{color:var(--ink-3)}
 <header class="site">
   <div class="wrap hrow">
     <a class="brand" href="#/cases">
-      <span class="mark">EB</span>
+      <span class="mark" aria-hidden="true"></span>
       <span class="txt"><b>Hackley Ethics Bowl</b><i>Team · 2026–2027</i></span>
     </a>
     <nav class="tabs" id="nav">
