@@ -4,17 +4,47 @@ Static site for the Hackley Ethics Bowl team. No build step, no backend.
 GitHub → Netlify.
 
 ```
-public/              ← everything Netlify serves
-  index.html         ← the whole site (one file: markup, styles, behaviour)
-  data/cases.json    ← the 15 cases + the student/class work layer
-  data/logistics.json← calendar, contacts, match rules, scoring, frameworks, team
-  docs/*.pdf         ← NHSEB documents linked from Resources
-  robots.txt         ← asks search engines not to index
-tools/
-  parse_caseset.py   ← regenerates cases.json from the NHSEB case set PDF
-  serve.py           ← local preview server
-netlify.toml         ← publish directory + headers
+Desktop/PARA2026/Ethics Bowl Site Build/     ← project folder (private, never in git)
+  Cases/Case Analysis/     your case analysis docs — these must never reach the site
+  Logistics and Emails/    correspondence, registration records
+  Cases/, Miscellaneous/   original NHSEB PDFs
+  Frameworks/              source material for the Frameworks page
+  Images/                  working images
+
+  site/                    ← THE GIT REPO starts here. Everything below is public.
+    public/                ← everything Netlify serves
+      index.html           the whole site (markup, styles, behaviour in one file)
+      data/cases.json      the 15 cases + the student/class work layer
+      data/logistics.json  calendar, contacts, match rules, scoring, frameworks, team
+      docs/*.pdf           NHSEB documents linked from Resources
+      img/                 images used by the site
+      robots.txt
+    tools/
+      parse_caseset.py     regenerates cases.json from the NHSEB case set PDF
+      serve.py             local preview server
+    netlify.toml
 ```
+
+**Why the repo is nested, and why that is safe.** Git only tracks files beneath its own root.
+The repo root is `site/`, so everything beside it — your case analysis, the emails, the
+registration records — is outside git's reach. Not by a `.gitignore` rule that could be edited
+away: `git add ../Cases/Case\ Analysis` fails outright with *"outside repository"*. The folder
+boundary is the protection.
+
+## Where to put new things
+
+| What you have | Where it goes | Then |
+|---|---|---|
+| Student work on a case | `public/data/cases.json` | commit + push |
+| Team roster | `public/data/logistics.json` → `team.members` | commit + push |
+| An image for the site (logo, banner) | `public/img/` | reference it as `img/name.png` |
+| A new NHSEB document to link | `public/docs/` + add to `logistics.json` → `documents` | commit + push |
+| **Your own case analysis** | `../Cases/Case Analysis/` — **outside the repo** | nothing; it stays private |
+| Emails, registration records | `../Logistics and Emails/` — outside the repo | nothing |
+| A revised NHSEB case set PDF | `../Cases/`, then `python3 tools/parse_caseset.py` | commit + push |
+
+The rule of thumb: **if it should be visible to students, it goes under `site/public/`. If it is
+yours, it stays in the project folder beside the repo.**
 
 ## Deploying
 
@@ -94,6 +124,7 @@ Only needed if NHSEB revises the case set.
 python3 tools/parse_caseset.py
 ```
 
-Edit the `SRC` path at the top first — it points at the original PDF outside this repo. The
+It looks for the PDF at `../Cases/Regional+Case+Set+(2026-2027)-+SECURED.pdf`, outside the repo.
+Pass a different path as an argument if it has moved. The
 parser handles the ligature, footnote, superscript, and page-number quirks in the source PDF;
 check its summary table afterwards (15 cases, 73 paragraphs, 41 questions, 20 sources).

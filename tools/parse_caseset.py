@@ -4,10 +4,17 @@ Produces site/data/cases.json: the official case text (fixed, from NHSEB) plus a
 empty scaffold for student/class content. Nothing from the teacher's private case
 analysis documents is read or written here.
 """
-import pypdf, re, json, unicodedata, pathlib
+import pypdf, re, json, unicodedata, pathlib, sys
 
-SRC = "/Users/sfitzpatrick/Desktop/PARA2026/Ethics Bowl Site Build/Cases/Regional+Case+Set+(2026-2027)-+SECURED.pdf"
-OUT = pathlib.Path("/Users/sfitzpatrick/Desktop/PARA2026/Ethics Bowl Site Build/site/data")
+REPO = pathlib.Path(__file__).resolve().parent.parent   # the git repo
+OUT  = REPO / "public" / "data"
+
+# The case set PDF lives with the source material, one level ABOVE the repo —
+# deliberately outside version control. Override with: python3 parse_caseset.py <pdf>
+SRC = sys.argv[1] if len(sys.argv) > 1 else str(
+    REPO.parent / "Cases" / "Regional+Case+Set+(2026-2027)-+SECURED.pdf")
+if not pathlib.Path(SRC).exists():
+    sys.exit(f"Case set PDF not found:\n  {SRC}\nPass the path as an argument instead.")
 LIG = {"ﬀ":"ff","ﬁ":"fi","ﬂ":"fl","ﬃ":"ffi","ﬄ":"ffl","ﬅ":"ft","ﬆ":"st"}
 
 def clean(s):
