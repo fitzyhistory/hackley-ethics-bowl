@@ -1,0 +1,10 @@
+.DS_Store
+.netlify/
+node_modules/
+*.log
+
+# Never commit source material — it lives outside this repo on purpose.
+# Teacher case analysis, email correspondence, and registration records
+# must stay out of version control.
+*.docx
+*.pptx

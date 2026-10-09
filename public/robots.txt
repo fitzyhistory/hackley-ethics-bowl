@@ -1,0 +1,4 @@
+# Class resource. Reproduces NHSEB case material under CC BY-NC-ND for Hackley School use.
+# Not intended for search indexing.
+User-agent: *
+Disallow: /

@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hackley Ethics Bowl Team 2026–2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Hackley Hornets — black, grey, yellow */
+  --bg:#F4F4F2; --surface:#FFFFFF; --surface-2:#EBEBE7; --line:#DCDCD6;
+  --ink:#121214; --ink-2:#4A4D53; --ink-3:#7A7E85;
+  --hl:#FFC72C; --hl-ink:#121214;          /* yellow + text that sits on it */
+  --accent:#121214; --accent-soft:#EBEBE7; --accent-ink:#121214;
+  --hdr:#121214; --hdr-ink:#FFFFFF; --hdr-dim:rgba(255,255,255,.62);
+  --done-bg:#FFC72C; --done-ink:#121214;
+  --wait-ink:#6B5300; --wait-line:#FFC72C;
+  --radius:10px; --maxw:1120px;
+  --display:Archivo,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --fw-consequentialist:#9C4520; --fw-deontological:#2C5AA0; --fw-virtue:#246848;
+  --fw-justice:#6B4A9E; --fw-care:#A83E6B; --fw-contract:#28716E;
+  --shadow:0 1px 2px rgba(18,18,20,.05), 0 1px 3px rgba(18,18,20,.07);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0C0C0E; --surface:#16171A; --surface-2:#1E2025; --line:#2C2E34;
+    --ink:#F1F1EF; --ink-2:#B0B4BB; --ink-3:#7F848C;
+    --hl:#FFC72C; --hl-ink:#121214;
+    --accent:#FFC72C; --accent-soft:#2A2616; --accent-ink:#FFC72C;
+    --hdr:#000000; --hdr-ink:#FFFFFF; --hdr-dim:rgba(255,255,255,.6);
+    --done-bg:#FFC72C; --done-ink:#121214;
+    --wait-ink:#FFC72C; --wait-line:#8A6E14;
+    --fw-consequentialist:#E8845A; --fw-deontological:#86AEEC; --fw-virtue:#5FC08C;
+    --fw-justice:#B79BE4; --fw-care:#EC8FB6; --fw-contract:#5FC4BC;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 1px 3px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0C0C0E; --surface:#16171A; --surface-2:#1E2025; --line:#2C2E34;
+  --ink:#F1F1EF; --ink-2:#B0B4BB; --ink-3:#7F848C;
+  --hl:#FFC72C; --hl-ink:#121214;
+  --accent:#FFC72C; --accent-soft:#2A2616; --accent-ink:#FFC72C;
+  --hdr:#000000; --hdr-ink:#FFFFFF; --hdr-dim:rgba(255,255,255,.6);
+  --done-bg:#FFC72C; --done-ink:#121214;
+  --wait-ink:#FFC72C; --wait-line:#8A6E14;
+  --fw-consequentialist:#E8845A; --fw-deontological:#86AEEC; --fw-virtue:#5FC08C;
+  --fw-justice:#B79BE4; --fw-care:#EC8FB6; --fw-contract:#5FC4BC;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 1px 3px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.65 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased}
+a{color:var(--accent-ink)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+/* ---------- header ---------- */
+header.site{background:var(--hdr);position:sticky;top:0;z-index:50}
+.hrow{display:flex;align-items:center;gap:16px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px;margin-right:auto;text-decoration:none;color:inherit;min-width:0}
+.mark{width:5px;align-self:stretch;min-height:32px;background:var(--hl);border-radius:99px;flex:none}
+.brand .txt{display:block;min-width:0}
+.brand{color:var(--hdr-ink)}
+.brand .txt b{font-family:var(--display);font-size:17px;font-weight:800;letter-spacing:-.02em;display:block;
+  line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:uppercase}
+.brand .txt i{font-style:normal;font-size:10.5px;font-weight:600;color:var(--hdr-dim);display:block;
+  line-height:1.4;letter-spacing:.14em}
+nav.tabs{display:flex;gap:2px;flex-wrap:wrap}
+.spacer{flex-basis:100%;height:0}
+@media(min-width:900px){.spacer{display:none}}
+nav.tabs a{padding:7px 12px;border-radius:6px;text-decoration:none;color:var(--hdr-dim);font-size:13.5px;font-weight:600}
+nav.tabs a:hover{background:rgba(255,255,255,.12);color:var(--hdr-ink)}
+nav.tabs a.on{background:var(--hl);color:var(--hl-ink);font-weight:700}
+.hbtn{font:inherit;font-size:12.5px;padding:6px 11px;border-radius:6px;border:1px solid rgba(255,255,255,.3);
+  background:transparent;color:var(--hdr-dim);cursor:pointer}
+.hbtn:hover{background:rgba(255,255,255,.12);color:var(--hdr-ink)}
+.hbtn.on{background:var(--hl);border-color:var(--hl);color:var(--hl-ink);font-weight:700}
+
+/* ---------- demo banner ---------- */
+.demobar{background:var(--hl);color:var(--hl-ink);font-size:13px;padding:8px 0;font-weight:600}
+.demobar .wrap{display:block}
+
+main{padding:28px 0 72px}
+h1.page{font-family:var(--display);font-size:27px;font-weight:800;letter-spacing:-.025em;margin:0 0 4px;
+  text-transform:uppercase}
+p.lede{color:var(--ink-2);margin:0 0 22px;font-size:15px;max-width:68ch}
+
+/* ---------- toolbar ---------- */
+.toolbar{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:0 0 20px}
+.toolbar input[type=search]{flex:1;min-width:190px;font:inherit;font-size:14px;padding:8px 12px;
+  border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+.toolbar input[type=search]:focus{outline:2px solid var(--accent);outline-offset:-1px}
+.chip{font:inherit;font-size:13px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);
+  background:var(--surface);color:var(--ink-2);cursor:pointer;white-space:nowrap}
+.chip:hover{background:var(--surface-2)}
+.chip.on{background:var(--hl);border-color:var(--hl);color:var(--hl-ink);font-weight:700}
+
+/* ---------- case grid ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:13px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px;
+  text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:9px;box-shadow:var(--shadow);
+  transition:border-color .12s, transform .12s}
+.card:hover{border-color:var(--accent);transform:translateY(-1px)}
+.card .top{display:flex;align-items:baseline;gap:11px}
+.num{font-family:var(--display);font-size:30px;font-weight:800;line-height:.95;color:var(--ink);
+  letter-spacing:-.045em;flex:none;font-variant-numeric:tabular-nums}
+.card .num{position:relative}
+.card .num::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:3px;background:var(--hl);border-radius:2px}
+.card h3{margin:0;font-size:15.5px;font-weight:620;letter-spacing:-.01em;line-height:1.3}
+.badges{display:flex;gap:5px;flex-wrap:wrap;margin-top:auto;padding-top:3px}
+.badge{font-size:11px;font-weight:620;padding:2px 7px;border-radius:5px;letter-spacing:.02em}
+.badge.star{background:var(--star-soft);color:var(--star)}
+.badge.done{background:var(--done-bg);color:var(--done-ink)}
+.badge.wait{background:transparent;color:var(--wait-ink);box-shadow:inset 0 0 0 1.5px var(--wait-line)}
+.badge.idle{background:var(--surface-2);color:var(--ink-3)}
+.badge.star{background:var(--hl);color:var(--hl-ink)}
+.who{font-size:12.5px;color:var(--ink-3)}
+.who b{color:var(--ink-2);font-weight:600}
+.meter{height:5px;background:var(--surface-2);border-radius:99px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--hl);border-radius:99px;transition:width .3s}
+.meter.zero i{background:var(--ink-3);opacity:.35}
+
+/* ---------- case detail ---------- */
+.back{display:inline-block;font-size:13.5px;color:var(--ink-3);text-decoration:none;margin-bottom:14px}
+.back:hover{color:var(--accent-ink)}
+.casehead{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:5px}
+.casehead h1{margin:0;font-family:var(--display);font-size:30px;font-weight:800;letter-spacing:-.03em;
+  line-height:1.12;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.byline{color:var(--ink-3);font-size:13.5px;margin:0 0 22px}
+.byline b{color:var(--ink-2);font-weight:600}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 22px;margin-bottom:13px;box-shadow:var(--shadow)}
+.panel h2{margin:0 0 12px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-2);padding-left:10px;border-left:4px solid var(--hl)}
+.prose p{margin:0 0 13px;line-height:1.72}
+.prose p:last-child{margin-bottom:0}
+ol.dq{margin:0;padding-left:21px}
+ol.dq li{margin-bottom:9px;line-height:1.6}
+ol.dq li:last-child{margin-bottom:0}
+
+/* ---------- dropdowns ---------- */
+details.sec{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  margin-bottom:9px;box-shadow:var(--shadow);overflow:hidden}
+details.sec>summary{list-style:none;cursor:pointer;padding:14px 18px;display:flex;align-items:center;gap:11px;
+  font-weight:650;font-size:15px;user-select:none;font-family:var(--display);letter-spacing:-.01em}
+details.sec>summary::-webkit-details-marker{display:none}
+details.sec>summary:hover{background:var(--surface-2)}
+.caret{width:9px;height:9px;border-right:2px solid var(--ink-3);border-bottom:2px solid var(--ink-3);
+  transform:rotate(-45deg);transition:transform .18s;flex:none;margin-left:-2px}
+details.sec[open]>summary .caret{transform:rotate(45deg)}
+.sec .state{margin-left:auto;font-size:11.5px;font-weight:620;padding:2px 8px;border-radius:5px;white-space:nowrap}
+.state.empty{background:var(--surface-2);color:var(--ink-3)}
+.state.filled{background:var(--done-bg);color:var(--done-ink)}
+.secbody{padding:2px 18px 18px;border-top:1px solid var(--line);margin-top:-1px}
+.secbody>:first-child{margin-top:14px}
+.empty-note{color:var(--ink-3);font-size:14px;font-style:italic;margin:14px 0 0;
+  padding:13px 15px;background:var(--surface-2);border-radius:8px;border:1px dashed var(--line)}
+.entry{margin:0 0 15px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.entry:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.entry p{margin:0 0 8px;line-height:1.68}
+.attrib{font-size:12px;color:var(--ink-3);font-style:normal}
+.attrib b{color:var(--ink-2);font-weight:600}
+
+table.sh{width:100%;border-collapse:collapse;font-size:14px;margin-top:14px}
+table.sh th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);
+  padding:0 11px 7px 0;font-weight:700;border-bottom:1px solid var(--line)}
+table.sh td{padding:10px 11px 10px 0;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.5}
+table.sh tr:last-child td{border-bottom:none}
+.scroll{overflow-x:auto}
+
+.fw{display:grid;gap:11px;margin-top:14px}
+.fw .lens{background:var(--surface-2);border-radius:0 8px 8px 0;padding:13px 15px}
+.fw .lens h4{margin:0 0 6px;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+.fw .lens p{margin:0;font-size:14.5px;line-height:1.6}
+.fw .lens .empty-note{margin:0;padding:0;background:none;border:none;font-size:13.5px}
+
+.openq{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--hl);
+  border-radius:var(--radius);padding:18px 20px;margin-bottom:13px;box-shadow:var(--shadow)}
+.openq h2{margin:0 0 10px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.openq ul{margin:0;padding-left:19px}
+ul.rules{margin:0;padding-left:19px}
+ul.rules li{margin-bottom:8px;line-height:1.6}
+ul.rules li:last-child{margin-bottom:0}
+h2.grouphead{font-family:var(--display);font-size:15px;font-weight:800;letter-spacing:-.01em;
+  color:var(--ink);margin:26px 0 2px;text-transform:uppercase}
+.lens-card.supp{border-style:dashed}
+.lens-card .state{font-weight:550;text-transform:none;letter-spacing:0}
+.vocab{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px;vertical-align:baseline}
+.lens-card .state.fwchip{color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lens-card .state.fwchip{color:#121214}}
+:root[data-theme="dark"] .lens-card .state.fwchip{color:#121214}
+.vocab span{font-size:12.5px;background:var(--surface);border:1px solid var(--line);
+  border-radius:999px;padding:3px 9px;color:var(--ink-2)}
+.openq li{margin-bottom:6px;line-height:1.58}
+.openq li:last-child{margin-bottom:0}
+.openq .empty-note{background:none;border:none;padding:0;margin:0;color:var(--wait);opacity:.85}
+
+ol.src{margin:14px 0 0;padding-left:21px;font-size:13.5px;color:var(--ink-2)}
+ol.src li{margin-bottom:7px;line-height:1.5;word-break:break-word}
+
+/* ---------- prep / logistics ---------- */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:13px}
+.timeline{list-style:none;margin:14px 0 0;padding:0}
+.timeline li{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.timeline li:last-child{border-bottom:none}
+.tdate{font-size:12.5px;font-weight:650;color:var(--ink-2);min-width:112px;flex:none;font-variant-numeric:tabular-nums}
+.tbody{flex:1;min-width:0}
+.tbody b{font-weight:600;display:block;line-height:1.4}
+.tbody small{color:var(--ink-3);font-size:12.5px;display:block;margin-top:3px;line-height:1.5}
+.pill{font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:5px;letter-spacing:.04em;text-transform:uppercase;flex:none}
+.pill.done{background:var(--done-bg);color:var(--done-ink)}
+.pill.tent{background:transparent;color:var(--wait-ink);box-shadow:inset 0 0 0 1.5px var(--wait-line)}
+.pill.up{background:var(--surface-2);color:var(--ink-3)}
+dl.contact{margin:0}
+dl.contact div{padding:11px 0;border-bottom:1px solid var(--line)}
+dl.contact div:last-child{border-bottom:none}
+dl.contact dt{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:3px}
+dl.contact dd{margin:0;line-height:1.55;font-size:14.5px}
+dl.contact dd small{color:var(--ink-3);display:block;font-size:13px}
+.linklist{list-style:none;margin:14px 0 0;padding:0}
+.linklist li{padding:10px 0;border-bottom:1px solid var(--line)}
+.linklist li:last-child{border-bottom:none}
+.linklist a{font-weight:560;text-decoration:none}
+.linklist a:hover{text-decoration:underline}
+.linklist small{display:block;color:var(--ink-3);font-size:12.5px;margin-top:2px}
+.warn{background:var(--surface-2);color:var(--ink-2);border-left:4px solid var(--hl);border-radius:0 6px 6px 0;
+  padding:8px 12px;font-size:12.5px;margin-top:8px;font-weight:500}
+
+footer.site{border-top:3px solid var(--hl);padding:22px 0 40px;color:var(--ink-3);font-size:12.5px;line-height:1.6}
+footer.site a{color:var(--ink-3)}
+.hide{display:none!important}
+@media(max-width:640px){
+  .casehead h1{font-size:22px}
+  .tdate{min-width:auto}
+  .timeline li{flex-direction:column;gap:5px}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap hrow">
+    <a class="brand" href="#/cases">
+      <span class="mark">EB</span>
+      <span class="txt"><b>Hackley Ethics Bowl</b><i>Team · 2026–2027</i></span>
+    </a>
+    <nav class="tabs" id="nav">
+      <a href="#/cases">Cases</a>
+      <a href="#/prep">Prep</a>
+      <a href="#/frameworks">Frameworks</a>
+      <a href="#/logistics">Logistics</a>
+      <a href="#/resources">Resources</a>
+      <a href="#/team">Team</a>
+    </nav>
+    <button class="hbtn" id="demo" title="Fill one case with obviously fake placeholder text so you can see the populated state">Preview filled state</button>
+    <button class="hbtn" id="theme" title="Toggle light/dark">◐</button>
+  </div>
+</header>
+
+<div class="demobar hide" id="demobar">
+  <div class="wrap">⚠ Preview mode — Case 01 is showing <b>fake placeholder text</b>, not real student work. Click “Preview filled state” again to turn it off.</div>
+</div>
+
+<main class="wrap" id="view"></main>
+
+<footer class="site">
+  <div class="wrap" id="foot"></div>
+</footer>
+
+<script>
+let CASES = [], LOG = null;
+
+const SECTIONS = [
+  {key:"coreEthicalDilemmas",  label:"Core Ethical Dilemmas"},
+  {key:"stakeholders",         label:"Stakeholders"},
+  {key:"frameworks",           label:"Ethical Framework Analysis"},
+  {key:"practicePresentation", label:"Practice Presentation", teacher:true},
+  {key:"looseEnds",            label:"Loose Ends and Unconsidered Issues", teacher:true}
+];
+const LENSES = [
+  ["consequentialist","Consequentialist"],["deontological","Deontological"],
+  ["virtue","Virtue ethics"],["justice","Justice / fairness"]
+];
+const FW_KEYS = ["consequentialist","deontological","virtue","justice","care","contract"];
+const FW_COLOR = Object.fromEntries(FW_KEYS.map(k => [k, `var(--fw-${k})`]));
+
+const esc = s => String(s??"").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+/* ---------- demo fixture: obviously fake, never real analysis ---------- */
+let DEMO = false;
+const PLACEHOLDER = {
+  coreEthicalDilemmas:[{text:"[Placeholder] This is where the assigned student's account of the central dilemma would appear, followed by whatever the class added when we discussed it.",who:"Sample Student",when:"Oct 22"}],
+  stakeholders:[
+    {who:"[Placeholder] First stakeholder",wants:"What they want",power:"What leverage they have",vulnerability:"What they stand to lose"},
+    {who:"[Placeholder] Second stakeholder",wants:"A competing interest",power:"Less leverage",vulnerability:"A different exposure"}
+  ],
+  frameworks:{
+    consequentialist:[{text:"[Placeholder] How a consequentialist would weigh this.",who:"Class discussion",when:"Nov 4"}],
+    deontological:[{text:"[Placeholder] What duties or rights are in play.",who:"Class discussion",when:"Nov 4"}],
+    virtue:[], justice:[]
+  },
+  practicePresentation:[{text:"[Placeholder] Notes from the practice run — speaker order, what landed, what to cut.",who:"Mr. Fitzpatrick",when:"Nov 4"}],
+  looseEnds:[
+    {text:"[Placeholder] An angle the discussion never got to.",who:"Mr. Fitzpatrick",when:"Nov 4"},
+    {text:"[Placeholder] A second thread worth picking up before competition.",who:"Mr. Fitzpatrick",when:"Nov 4"}
+  ]
+};
+
+function liveCase(c){
+  if(!(DEMO && c.number===1)) return c;
+  return {...c, expert:"Sample Student", status:"discussed",
+          sections:{...c.sections, ...PLACEHOLDER}};
+}
+function filled(c,key){
+  const v=c.sections[key];
+  if(key==="frameworks") return LENSES.some(([k])=>(v[k]||[]).length>0);
+  return (v||[]).length>0;
+}
+const fillCount = c => SECTIONS.filter(s=>filled(c,s.key)).length;
+
+function statusBadge(c){
+  const n=fillCount(c);
+  if(n===SECTIONS.length) return '<span class="badge done">Complete</span>';
+  if(n>0) return `<span class="badge wait">${n}/${SECTIONS.length} sections</span>`;
+  if(c.expert) return '<span class="badge wait">Awaiting submission</span>';
+  return '<span class="badge idle">Not started</span>';
+}
+
+/* ---------- views ---------- */
+let filter={q:"",unstarted:false};
+
+function viewCases(){
+  const list=CASES.map(liveCase).filter(c=>{
+    if(filter.unstarted && fillCount(c)>0) return false;
+    if(filter.q){
+      const h=[c.number,c.slug,c.title,c.expert||"",
+               c.narrative.join(" "), c.discussionQuestions.join(" "),
+               c.sources.map(s=>s.title||"").join(" ")].join(" ").toLowerCase();
+      if(!h.includes(filter.q.toLowerCase())) return false;
+    }
+    return true;
+  });
+  const total=CASES.length, started=CASES.map(liveCase).filter(c=>fillCount(c)>0).length;
+  return `
+  <h1 class="page">NHSEB 2026–2027 Regional Case Set</h1>
+  <p class="lede">${started} of ${total} cases have work in them so far.</p>
+  <div class="toolbar">
+    <input type="search" id="q" placeholder="Search cases by title, text, or student…" value="${esc(filter.q)}">
+    <button class="chip ${filter.unstarted?"on":""}" data-f="unstarted">Not started</button>
+  </div>
+  ${list.length?`<div class="grid">${list.map(cardHTML).join("")}</div>`
+    :`<p class="empty-note">No cases match that filter.</p>`}`;
+}
+
+function cardHTML(c){
+  const n=fillCount(c), pct=Math.round(n/SECTIONS.length*100);
+  return `<a class="card" href="#/case/${c.slug}">
+    <div class="top"><span class="num">${c.slug}</span><h3>${esc(c.title)}</h3></div>
+    <div class="who">${c.expert?`Student: <b>${esc(c.expert)}</b>`:"No student assigned yet"}</div>
+    <div class="meter ${n?"":"zero"}"><i style="width:${n?pct:100}%"></i></div>
+    <div class="badges">
+      ${statusBadge(c)}
+    </div></a>`;
+}
+
+function entries(arr,render){
+  return arr.map(e=>`<div class="entry">${render(e)}
+    ${e.who?`<div class="attrib">— <b>${esc(e.who)}</b>${e.when?`, ${esc(e.when)}`:""}</div>`:""}
+  </div>`).join("");
+}
+
+function sectionBody(c,sec){
+  const v=c.sections[sec.key];
+  const note = sec.teacher
+    ? `Nothing here yet — this fills in after we discuss the case as a class.`
+    : (c.expert ? `Awaiting ${esc(c.expert)}’s submission.`
+                : `No student assigned to this case yet.`);
+
+  if(sec.key==="frameworks"){
+    return `<div class="fw">${LENSES.map(([k,label])=>{
+      const a=v[k]||[];
+      return `<div class="lens" style="border-left:4px solid ${FW_COLOR[k]}">
+        <h4 style="color:${FW_COLOR[k]}">${label}</h4>${
+        a.length?entries(a,e=>`<p>${esc(e.text)}</p>`)
+                :`<p class="empty-note">Not yet discussed.</p>`}</div>`;
+    }).join("")}</div>`;
+  }
+  if(!v || !v.length) return `<p class="empty-note">${note}</p>`;
+
+  if(sec.key==="stakeholders"){
+    return `<div class="scroll"><table class="sh">
+      <thead><tr><th>Stakeholder</th><th>What they want</th><th>Power</th><th>Vulnerability</th></tr></thead>
+      <tbody>${v.map(s=>`<tr><td><b>${esc(s.who)}</b></td><td>${esc(s.wants)}</td>
+        <td>${esc(s.power)}</td><td>${esc(s.vulnerability)}</td></tr>`).join("")}</tbody></table></div>`;
+  }
+  return entries(v,e=>`<p>${esc(e.text)}</p>`);
+}
+
+function viewCase(slug){
+  const raw=CASES.find(c=>c.slug===slug);
+  if(!raw) return `<p>Case not found. <a href="#/cases">Back to all cases</a></p>`;
+  const c=liveCase(raw);
+  return `
+  <a class="back" href="#/cases">← All cases</a>
+  <div class="casehead">
+    <h1><span class="num" style="font-size:15px;vertical-align:middle">${c.slug}</span> ${esc(c.title)}</h1>
+  </div>
+  <p class="byline">${c.expert?`Student: <b>${esc(c.expert)}</b>`:"No student assigned yet"}
+     · ${fillCount(c)} of ${SECTIONS.length} sections filled</p>
+
+  <div class="panel"><h2>The Case</h2>
+    <div class="prose">${c.narrative.map(p=>`<p>${esc(p)}</p>`).join("")}</div></div>
+
+  <details class="sec">
+    <summary><span class="caret"></span>Discussion Questions
+      <span class="state empty">${c.discussionQuestions.length}</span></summary>
+    <div class="secbody"><ol class="dq">${c.discussionQuestions.map(q=>`<li>${esc(q)}</li>`).join("")}</ol></div>
+  </details>
+
+  ${SECTIONS.map(sec=>{
+    const has=filled(c,sec.key);
+    return `<details class="sec" ${has?"open":""}>
+      <summary><span class="caret"></span>${sec.label}
+        <span class="state ${has?"filled":"empty"}">${has?"Filled":"Empty"}</span></summary>
+      <div class="secbody">${sectionBody(c,sec)}</div></details>`;
+  }).join("")}
+
+  ${c.sources.length?`<div class="panel"><h2>Sources cited in the case</h2>
+    <ol class="src">${c.sources.map(s=>`<li>${s.title?esc(s.title)+" — ":""}<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.url)}</a></li>`).join("")}</ol></div>`:""}`;
+}
+
+function viewPrep(){
+  const m=LOG.matchFormat, sc=LOG.scoring;
+  const band=b=>`<tr><td style="white-space:nowrap;font-variant-numeric:tabular-nums"><b>${esc(b.score)}</b></td><td>${esc(b.text)}</td></tr>`;
+  const bandTable=bs=>`<div class="scroll"><table class="sh"><tbody>${bs.map(band).join("")}</tbody></table></div>`;
+  const ul=a=>`<ul class="rules">${a.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`;
+
+  const comp=c=>`<details class="sec">
+    <summary><span class="caret"></span>${esc(c.name)}
+      <span class="state filled">${c.points} pts</span></summary>
+    <div class="secbody">
+      <p class="attrib" style="margin:14px 0 0">Earned by ${esc(c.earnedBy)}.</p>
+      ${c.subcriteria
+        ? c.subcriteria.map(x=>`<div class="lens" style="margin-top:12px">
+             <h4>${x.points} points</h4><p style="margin:0 0 9px">${esc(x.question)}</p>
+             ${bandTable(x.bands)}</div>`).join("")
+        : `<p style="margin:12px 0 0">${esc(c.question)}</p>${bandTable(c.bands)}`}
+    </div></details>`;
+
+  return `
+  <h1 class="page">How a Match Works</h1>
+  <p class="lede">One match, two cases, about thirty minutes. You present on one case and comment on the other team's case, and are scored on both.</p>
+
+  <div class="openq"><h2>You will not know the case in advance</h2>
+    <p style="margin:0">${esc(LOG.preparationNote)}</p></div>
+
+  <div class="panel"><h2>Match Timing</h2>
+    <div class="scroll"><table class="sh">
+      <thead><tr><th>Period</th><th>Confer</th><th>Speak</th><th>Running total</th></tr></thead>
+      <tbody>${m.periods.map(x=>`<tr><td><b>${esc(x.period)}</b></td><td>${esc(x.confer||"—")}</td>
+        <td>${esc(x.speak)}</td><td>${esc(x.runningTotal)}</td></tr>`).join("")}</tbody></table></div>
+    <div class="warn">${esc(m.note)}</div>
+  </div>
+
+  <div class="panel"><h2>Time Signals</h2>${ul(LOG.timeSignals)}</div>
+
+  <details class="sec"><summary><span class="caret"></span>The Match, Step by Step
+      <span class="state empty">${LOG.matchSteps.length}</span></summary>
+    <div class="secbody"><ol class="dq" style="margin-top:14px">${
+      LOG.matchSteps.map(x=>`<li>${esc(x)}</li>`).join("")}</ol></div></details>
+
+  <div class="panel"><h2>Doing Commentary Well</h2>
+    <p style="margin:0 0 4px"><b>${esc(LOG.commentary.headline)}</b></p>
+    ${ul(LOG.commentary.points)}</div>
+
+  <div class="panel"><h2>Responding to Commentary</h2>
+    <p style="margin:0 0 4px"><b>${esc(LOG.responsePeriod.headline)}</b></p>
+    ${ul(LOG.responsePeriod.points)}</div>
+
+  <div class="panel"><h2>How Judges Score — ${sc.totalPerTeam} points per team</h2>
+    <p style="margin:0 0 4px">${esc(sc.note)}</p>
+    <p class="attrib" style="margin:0 0 14px">Scored ${esc(sc.scope)}.</p>
+    ${sc.components.map(comp).join("")}
+    <div class="scroll"><table class="sh" style="margin-top:16px"><tbody>
+      ${sc.components.map(c=>`<tr><td>${esc(c.name)}</td>
+        <td style="text-align:right;font-variant-numeric:tabular-nums">${c.points}</td></tr>`).join("")}
+      <tr><td><b>Total per team, per judge</b></td>
+      <td style="text-align:right;font-variant-numeric:tabular-nums"><b>${sc.totalPerTeam}</b></td></tr>
+    </tbody></table></div>
+  </div>
+
+  <div class="openq"><h2>Winning is about votes, not points</h2>
+    <p style="margin:0 0 12px">${esc(sc.winnerNote)}</p>
+    <div class="scroll"><table class="sh">
+      <thead><tr><th></th><th>Team A</th><th>Team B</th><th>Vote</th></tr></thead>
+      <tbody>${sc.winnerExample.map(r=>`<tr><td><b>${esc(r.judge)}</b></td>
+        <td style="font-variant-numeric:tabular-nums">${r.teamA}</td>
+        <td style="font-variant-numeric:tabular-nums">${r.teamB}</td>
+        <td>${esc(r.vote)}</td></tr>`).join("")}</tbody></table></div>
+    <p style="margin:12px 0 0"><b>${esc(sc.winnerExampleResult)}</b></p></div>
+
+  <div class="panel"><h2>Rules to Know</h2>${ul(LOG.rulesThatCatchTeamsOut)}</div>
+
+  <div class="panel"><h2>What Is Not Penalized</h2>${ul(LOG.whatWontHurtYou)}</div>
+
+  <div class="panel"><h2>Team Composition</h2>${ul(LOG.teamRules)}</div>
+
+  <p class="attrib" style="margin-top:18px">${esc(LOG.rulesSource.caveat)}</p>`;
+}
+
+function viewFrameworks(){
+  const f=LOG.frameworks;
+  const ul=a=>`<ul class="rules">${a.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`;
+  const chips=a=>`<div class="vocab">${a.map(x=>`<span>${esc(x)}</span>`).join("")}</div>`;
+
+  const card=l=>`<details class="sec lens-card${l.tier==="supplementary"?" supp":""}"
+      style="border-left:6px solid ${FW_COLOR[l.key]||"var(--line)"}">
+    <summary><span class="caret"></span>${esc(l.name)}
+      <span class="state fwchip" style="background:${FW_COLOR[l.key]}">${esc(l.summary)}</span></summary>
+    <div class="secbody">
+      <div class="prose" style="margin-top:14px"><p>${esc(l.coreIdea)}</p></div>
+      <div class="lens"><h4>Key questions to ask</h4>${ul(l.keyQuestions)}</div>
+      <div class="two" style="margin-top:11px">
+        <div class="lens"><h4>Strengths</h4>${ul(l.strengths)}</div>
+        <div class="lens"><h4>Limits</h4>${ul(l.limits)}</div>
+      </div>
+      <div class="lens" style="margin-top:11px"><h4>Vocabulary</h4>${chips(l.vocabulary)}</div>
+      <p class="attrib" style="margin-top:11px">Associated with ${l.thinkers.map(esc).join(", ")}.</p>
+    </div></details>`;
+
+  const core=f.lenses.filter(l=>l.tier==="core");
+  const supp=f.lenses.filter(l=>l.tier==="supplementary");
+
+  return `
+  <h1 class="page">Ethical Frameworks</h1>
+  <p class="lede">${esc(f.intro)}</p>
+
+  ${f.caveat?`<div class="openq"><h2>Naming theories is not required</h2>
+    <p style="margin:0">${esc(f.caveat)}</p></div>`:""}
+
+  <h2 class="grouphead">The four core frameworks</h2>
+  <p class="attrib" style="margin:0 0 12px">Applied to every case, in the Ethical Framework Analysis section.</p>
+  ${core.map(card).join("")}
+
+  <h2 class="grouphead">Supplementary lenses</h2>
+  <p class="attrib" style="margin:0 0 12px">Optional.</p>
+  ${supp.map(card).join("")}
+
+  <div class="panel"><h2>Quick Comparison</h2>
+    <div class="scroll"><table class="sh">
+      <thead><tr><th>Framework</th><th>Central question</th><th>Focus</th></tr></thead>
+      <tbody>${f.comparison.map(r=>`<tr><td><span class="dot" style="background:${
+        FW_COLOR[r.key]||"var(--line)"}"></span><b>${esc(r.name)}</b>${
+        r.tier==="supplementary"?` <span class="attrib">(supplementary)</span>`:""}</td>
+        <td>${esc(r.question)}</td><td>${esc(r.focus)}</td></tr>`).join("")}</tbody></table></div></div>
+
+  <div class="panel"><h2>Using the Frameworks Well</h2>
+    ${f.usingWell.map(x=>`<div class="entry"><p><b>${esc(x.head)}</b> ${esc(x.text)}</p></div>`).join("")}</div>`;
+}
+
+function viewTeam(){
+  const t=LOG.team;
+  return `
+  <h1 class="page">Team</h1>
+  ${t.members.length
+    ? `<div class="grid">${t.members.map(m=>`<div class="card" style="cursor:default">
+         <div class="top"><h3>${esc(m.name)}</h3></div>
+         <div class="who">${m.cases&&m.cases.length
+            ? `Cases: ${m.cases.map(n=>`<b>${esc(n)}</b>`).join(", ")}`
+            : "No case assigned yet"}</div></div>`).join("")}</div>`
+    : `<div class="panel"><p class="empty-note" style="margin:0">Team members to be added.</p></div>`}`;
+}
+
+function viewLogistics(){
+  const pill=s=>s==="done"?'<span class="pill done">Done</span>'
+    :s==="tentative"?'<span class="pill tent">Unconfirmed</span>':'<span class="pill up">Upcoming</span>';
+  const fmt=d=>{const[y,m,dd]=d.split("-");const M=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return dd?`${M[+m-1]} ${+dd}, ${y}`:`${M[+m-1]} ${y}`;};
+  return `
+  <h1 class="page">Logistics</h1>
+  <p class="lede">Last updated ${esc(LOG.lastUpdated)}.</p>
+  <div class="panel"><h2>Season Calendar</h2>
+    <ul class="timeline">${LOG.keyDates.map(d=>`<li>
+      <span class="tdate">${fmt(d.date)}${d.endDate?`–${(+d.endDate.split("-")[2])}`:""}</span>
+      <span class="tbody"><b>${esc(d.label)}</b>
+        ${d.location?`<small>${esc(d.location)}</small>`:""}
+        ${d.note?`<small>${esc(d.note)}</small>`:""}</span>
+      ${pill(d.status)}</li>`).join("")}</ul></div>
+
+  <div class="openq"><h2>Still Unconfirmed</h2>
+    <ul>${LOG.openQuestions.map(q=>`<li>${esc(q)}</li>`).join("")}</ul></div>
+
+  <div class="two">
+    <div class="panel"><h2>Contacts</h2>
+      <dl class="contact">${LOG.contacts.map(c=>`<div>
+        <dt>${esc(c.role)}</dt>
+        <dd><b>${esc(c.name)}</b><small>${esc(c.org)}</small>
+          <small><a href="mailto:${esc(c.email)}">${esc(c.email)}</a>${c.phone?` · ${esc(c.phone)}`:""}</small></dd>
+      </div>`).join("")}</dl></div>
+    <div class="panel"><h2>Registration</h2>
+      <p style="margin:0 0 9px"><span class="pill done">${esc(LOG.registration.status)}</span></p>
+      <p style="margin:0;font-size:14.5px;line-height:1.6">${esc(LOG.registration.amount)} ·
+        confirmed ${esc(LOG.registration.confirmedOn)} · ${esc(LOG.registration.registrant)}</p>
+      <div class="warn">${esc(LOG.registration.note)}</div></div>
+  </div>`;
+}
+
+function viewResources(){
+  return `
+  <h1 class="page">Resources</h1>
+  <p class="lede">Official NHSEB links and competition documents.</p>
+  <div class="two">
+    <div class="panel"><h2>NHSEB Official</h2>
+      <ul class="linklist">${LOG.links.map(l=>`<li>
+        <a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}${l.primary?" ↗":""}</a>
+        <small>${esc(l.url)}</small></li>`).join("")}</ul></div>
+    <div class="panel"><h2>Documents</h2>
+      <ul class="linklist">${LOG.documents.map(d=>`<li>
+        <a href="docs/${esc(d.file)}" target="_blank" rel="noopener">${esc(d.label)} ↗</a>
+        ${d.warning?`<div class="warn">${esc(d.warning)}</div>`:""}</li>`).join("")}</ul></div>
+  </div>`;
+}
+
+/* ---------- router ---------- */
+function render(){
+  if(!LOG) return;                       // data not in yet
+  const h=location.hash||"#/cases";
+  const v=document.getElementById("view");
+  let html, tab;
+  if(h.startsWith("#/case/")){ html=viewCase(h.slice(7)); tab="#/cases"; }
+  else if(h==="#/prep"){ html=viewPrep(); tab=h; }
+  else if(h==="#/frameworks"){ html=viewFrameworks(); tab=h; }
+  else if(h==="#/team"){ html=viewTeam(); tab=h; }
+  else if(h==="#/logistics"){ html=viewLogistics(); tab=h; }
+  else if(h==="#/resources"){ html=viewResources(); tab=h; }
+  else { html=viewCases(); tab="#/cases"; }
+  v.innerHTML=html;
+  [...document.querySelectorAll("#nav a")].forEach(a=>a.classList.toggle("on",a.getAttribute("href")===tab));
+  if(!h.startsWith("#/case/")) window.scrollTo(0,0);
+
+  const q=document.getElementById("q");
+  if(q){
+    q.addEventListener("input",e=>{filter.q=e.target.value;const p=e.target.selectionStart;render();
+      const n=document.getElementById("q");n.focus();n.setSelectionRange(p,p);});
+    document.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{filter[b.dataset.f]=!filter[b.dataset.f];render();});
+  }
+}
+addEventListener("hashchange",render);
+
+document.getElementById("demo").onclick=e=>{
+  DEMO=!DEMO;
+  e.target.classList.toggle("on",DEMO);
+  e.target.textContent=DEMO?"Preview mode ON":"Preview filled state";
+  document.getElementById("demobar").classList.toggle("hide",!DEMO);
+  render();
+};
+document.getElementById("theme").onclick=()=>{
+  const cur=document.documentElement.getAttribute("data-theme");
+  const sysDark=matchMedia("(prefers-color-scheme:dark)").matches;
+  document.documentElement.setAttribute("data-theme",
+    cur ? (cur==="dark"?"light":"dark") : (sysDark?"light":"dark"));
+};
+async function boot(){
+  const view = document.getElementById("view");
+  try{
+    const grab = async p => {
+      const r = await fetch(p, {cache:"no-cache"});
+      if(!r.ok) throw new Error(`${p} → ${r.status}`);
+      return r.json();
+    };
+    const [cases, logistics] = await Promise.all([
+      grab("data/cases.json"), grab("data/logistics.json")
+    ]);
+    CASES = cases; LOG = logistics;
+    document.getElementById("foot").innerHTML =
+      `${esc(LOG.attribution)}<br>Updated ${esc(LOG.lastUpdated)} · ` +
+      `<a href="https://nhseb.org/" target="_blank" rel="noopener">nhseb.org</a>`;
+    render();
+  }catch(err){
+    view.innerHTML = `<div class="panel"><h2>Could not load the case data</h2>
+      <p style="margin:0 0 8px">${esc(String(err.message||err))}</p>
+      <p class="attrib" style="margin:0">If you opened this file directly from disk, browsers block
+      the data files for security. Run <code>python3 tools/serve.py</code> and open
+      <a href="http://127.0.0.1:8777">127.0.0.1:8777</a> instead.</p></div>`;
+  }
+}
+boot();
+</script>
+</body>
+</html>

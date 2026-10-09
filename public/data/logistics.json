@@ -1,0 +1,787 @@
+{
+  "season": "2026-2027",
+  "school": "Hackley School",
+  "lastUpdated": "2026-10-08",
+  "keyDates": [
+    {
+      "date": "2026-09-18",
+      "label": "Season launch + case set released",
+      "status": "done",
+      "scope": "national"
+    },
+    {
+      "date": "2026-11-02",
+      "label": "Initial registration period ends ($175 → $250)",
+      "status": "done",
+      "scope": "national",
+      "note": "Hackley registered and paid Oct 8, 2026."
+    },
+    {
+      "date": "2027-01-15",
+      "label": "Final national registration & payment deadline",
+      "status": "upcoming",
+      "scope": "national"
+    },
+    {
+      "date": "2027-01-30",
+      "label": "Westchester Regional",
+      "status": "tentative",
+      "scope": "regional",
+      "location": "Sacred Heart Greenwich (unconfirmed)",
+      "note": "Connor is pursuing this date and venue but has not confirmed either."
+    },
+    {
+      "date": "2027-02",
+      "label": "Divisional Playoffs",
+      "status": "upcoming",
+      "scope": "national"
+    },
+    {
+      "date": "2027-04-23",
+      "endDate": "2027-04-25",
+      "label": "National Championship, UNC Chapel Hill",
+      "status": "upcoming",
+      "scope": "national"
+    }
+  ],
+  "openQuestions": [
+    "Is Jan 30, 2027 confirmed for the Westchester Regional?",
+    "Can Hackley bring two teams? Connor is checking with his leadership.",
+    "The 2026-2027 Rules Manual has not been posted yet — the folder copy is 2025-2026."
+  ],
+  "registration": {
+    "status": "Registered and paid",
+    "confirmedOn": "2026-10-08",
+    "amount": "$175.00",
+    "registrant": "Stephen Fitzpatrick",
+    "note": "National registration does NOT enter a school in its regional. The regional is arranged separately with Connor."
+  },
+  "contacts": [
+    {
+      "role": "Regional Organizer — Westchester",
+      "name": "Connor Pellicciotti",
+      "org": "The Dr. Siobhan Nash-Marshall High School Ethics Bowl / The Marshall Institute",
+      "email": "connorp@ethics-institute.org",
+      "phone": "845-554-4446"
+    },
+    {
+      "role": "NHSEB Headquarters",
+      "name": "NHSEB HQ",
+      "org": "Parr Center for Ethics, UNC Chapel Hill",
+      "email": "ethicsbowl@unc.edu",
+      "phone": "(919) 480-8811"
+    },
+    {
+      "role": "NHSEB Event Administrator",
+      "name": "Leonidas Kirby",
+      "org": "Parr Center for Ethics",
+      "email": "Leonidas.Kirby@unc.edu"
+    }
+  ],
+  "matchFormat": {
+    "presentationMinutes": 5,
+    "note": "Regionals run a 5-minute presentation; the Rules Manual lets each Regional Organizer extend it to 6, and Divisional Playoffs and the National Championship always use 6. Everything else is the same. We have not yet confirmed which Connor is running for Westchester.",
+    "periods": [
+      {
+        "period": "Moderator's period",
+        "confer": null,
+        "speak": "~3 min",
+        "runningTotal": "~3 min"
+      },
+      {
+        "period": "Presentation",
+        "confer": "2 min",
+        "speak": "5 min",
+        "runningTotal": "10 min"
+      },
+      {
+        "period": "Commentary (opposing team)",
+        "confer": "2 min",
+        "speak": "3 min",
+        "runningTotal": "15 min"
+      },
+      {
+        "period": "Response (presenting team)",
+        "confer": "2 min",
+        "speak": "3 min",
+        "runningTotal": "20 min"
+      },
+      {
+        "period": "Judges' Q&A",
+        "confer": null,
+        "speak": "10 min",
+        "runningTotal": "~30 min"
+      }
+    ],
+    "presentationMinutesConfirmed": false
+  },
+  "scoring": {
+    "totalPerTeam": 60,
+    "scope": "per judge, per match (two cases)",
+    "note": "Each team is scored out of 60 by each of the three judges. A team earns points both for presenting its own case and for commenting on the other team's case; respectful dialogue is scored once for the whole match, not per case.",
+    "winnerNote": "The match is won on judges' votes, not total points. Each judge votes for whichever team they scored higher, and the team with the most votes wins — so a team can score more points overall and still lose the match.",
+    "winnerExample": [
+      {
+        "judge": "Judge 1",
+        "teamA": 48,
+        "teamB": 43,
+        "vote": "Team A"
+      },
+      {
+        "judge": "Judge 2",
+        "teamA": 45,
+        "teamB": 44,
+        "vote": "Team A"
+      },
+      {
+        "judge": "Judge 3",
+        "teamA": 39,
+        "teamB": 49,
+        "vote": "Team B"
+      }
+    ],
+    "winnerExampleResult": "Team A wins 2 votes to 1, even though Team B scored 136 points to Team A's 132.",
+    "components": [
+      {
+        "name": "Your presentation",
+        "points": 15,
+        "earnedBy": "the presenting team, on its own case",
+        "subcriteria": [
+          {
+            "question": "Did the presentation clearly and systematically address the moderator's question?",
+            "points": 5,
+            "bands": [
+              {
+                "score": "5",
+                "text": "Extremely clear presentation that systematically addressed the key dimensions of the question."
+              },
+              {
+                "score": "4",
+                "text": "Reasonably clear presentation that systematically addressed most key dimensions of the question."
+              },
+              {
+                "score": "3",
+                "text": "Hard to follow the argument. Significant dimensions of the question missed (passable)."
+              },
+              {
+                "score": "2",
+                "text": "Serious logical problems or underdeveloped argument (poor)."
+              },
+              {
+                "score": "1",
+                "text": "Incoherent presentation."
+              }
+            ]
+          },
+          {
+            "question": "Did the team clearly identify and thoroughly discuss the central moral dimensions of the case?",
+            "points": 5,
+            "bands": [
+              {
+                "score": "5",
+                "text": "Clearly and precisely identified central moral dimensions, and discussed these dimensions thoroughly."
+              },
+              {
+                "score": "4",
+                "text": "Mostly identified central moral dimensions and discussed major issues."
+              },
+              {
+                "score": "3",
+                "text": "Adequately identified and discussed some central moral dimensions (passable)."
+              },
+              {
+                "score": "2",
+                "text": "Misidentified some moral dimensions of the case and inadequately discussed (poor)."
+              },
+              {
+                "score": "1",
+                "text": "Misidentified the central moral dimensions."
+              }
+            ]
+          },
+          {
+            "question": "Did the presentation show awareness and thoughtful consideration of different viewpoints, especially those that would loom large for people who disagree with the team's position?",
+            "points": 5,
+            "bands": [
+              {
+                "score": "5",
+                "text": "Insightful analysis and discussion of the most significant viewpoints, including full and careful attention to opposing points of view."
+              },
+              {
+                "score": "4",
+                "text": "Solid analysis and discussion of some different viewpoints."
+              },
+              {
+                "score": "3",
+                "text": "Underdeveloped discussion of different viewpoints (passable)."
+              },
+              {
+                "score": "2",
+                "text": "Minimal consideration of different viewpoints (poor)."
+              },
+              {
+                "score": "1",
+                "text": "Minimal awareness of different viewpoints."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Your commentary on their case",
+        "points": 10,
+        "earnedBy": "the responding team, on the other team's case",
+        "question": "To what extent has the team effectively and directly responded to and engaged the presenting team's argument?",
+        "bands": [
+          {
+            "score": "10",
+            "text": "Especially insightful, complete, and composed commentary."
+          },
+          {
+            "score": "9",
+            "text": "Key points excellently addressed."
+          },
+          {
+            "score": "8–7",
+            "text": "Solid response to presenting team's points."
+          },
+          {
+            "score": "6–5",
+            "text": "Some points made, but few insights or constructive ideas (passable)."
+          },
+          {
+            "score": "4–3",
+            "text": "Weak or irrelevant response, or merely asking a series of questions (poor)."
+          },
+          {
+            "score": "2–1",
+            "text": "Failure to respond to presenting team, or resorting to personal attacks."
+          }
+        ]
+      },
+      {
+        "name": "Your response to their commentary",
+        "points": 10,
+        "earnedBy": "the presenting team, on its own case",
+        "question": "How did the team respond to the opposing team's commentary?",
+        "bands": [
+          {
+            "score": "10",
+            "text": "Especially insightful, complete, and composed response."
+          },
+          {
+            "score": "9",
+            "text": "Key points are excellently addressed."
+          },
+          {
+            "score": "8–7",
+            "text": "Solid response to commenting team."
+          },
+          {
+            "score": "6–5",
+            "text": "Some relevant points are made (passable)."
+          },
+          {
+            "score": "4–3",
+            "text": "Weak or irrelevant response (poor)."
+          },
+          {
+            "score": "2–1",
+            "text": "Failure to respond to commentary."
+          }
+        ]
+      },
+      {
+        "name": "Your response to the judges' questions",
+        "points": 20,
+        "earnedBy": "the presenting team, on its own case",
+        "question": "How did the team respond to the judges' questions?",
+        "bands": [
+          {
+            "score": "20",
+            "text": "Especially insightful, complete, and composed response."
+          },
+          {
+            "score": "19–17",
+            "text": "The most pressing points are identified and discussed."
+          },
+          {
+            "score": "16–13",
+            "text": "Several of the most important points are identified and discussed."
+          },
+          {
+            "score": "12–9",
+            "text": "Some relevant points are made (passable)."
+          },
+          {
+            "score": "8–5",
+            "text": "Weak or irrelevant response (poor)."
+          },
+          {
+            "score": "4–1",
+            "text": "Failure to respond to commentary and judges."
+          }
+        ]
+      },
+      {
+        "name": "Respectful dialogue",
+        "points": 5,
+        "earnedBy": "each team, once for the whole match",
+        "question": "Did the team show awareness that an ethics bowl is a collaborative discussion aimed at earnestly thinking through difficult ethical issues — not a debate to be won?",
+        "bands": [
+          {
+            "score": "5",
+            "text": "Respectfully engaged all parties in exceptionally productive and collaborative discussion."
+          },
+          {
+            "score": "4",
+            "text": "Respectfully engaged other team's arguments and points."
+          },
+          {
+            "score": "3",
+            "text": "Respectful of other team's argument but only marginal engagement and pursuit."
+          },
+          {
+            "score": "2",
+            "text": "Unengaged with other team's arguments."
+          },
+          {
+            "score": "1",
+            "text": "Combative or dismissive of other team's arguments."
+          }
+        ]
+      }
+    ]
+  },
+  "links": [
+    {
+      "label": "NHSEB — official site",
+      "url": "https://nhseb.org/",
+      "primary": true
+    },
+    {
+      "label": "How Ethics Bowl Works",
+      "url": "https://nhseb.org/how"
+    },
+    {
+      "label": "Season at a Glance",
+      "url": "https://nhseb.org/season"
+    },
+    {
+      "label": "NHSEB school registration",
+      "url": "http://go.unc.edu/registernhseb"
+    }
+  ],
+  "documents": [
+    {
+      "label": "Regional Case Set (2026-2027)",
+      "file": "regional-case-set-2026-2027.pdf",
+      "current": true
+    },
+    {
+      "label": "Rules Manual (2025-2026)",
+      "file": "rules-manual-2025-2026.pdf",
+      "current": false,
+      "warning": "This is last season's manual. Replace when NHSEB posts the 2026-2027 edition."
+    },
+    {
+      "label": "Judge Scoring Form",
+      "file": "judge-scoring-form.pdf",
+      "current": true
+    },
+    {
+      "label": "Match Scoring Criteria",
+      "file": "match-scoring-criteria.pdf",
+      "current": true
+    },
+    {
+      "label": "Moderator Script (5-minute)",
+      "file": "moderator-script-5min.pdf",
+      "current": true
+    },
+    {
+      "label": "Composite Score Report",
+      "file": "composite-score-report.pdf",
+      "current": true
+    }
+  ],
+  "attribution": "Cases © 2026 UNC Parr Center for Ethics, licensed CC BY-NC-ND 4.0. Reproduced for Hackley School classroom use. Source: nhseb.org",
+  "roster": [],
+  "assignments": [],
+  "frameworks": {
+    "intro": "Ethics is the systematic study of the principles that make actions right or wrong, for an individual or a collective — from the Greek ethos, meaning custom, character, or habit. The frameworks below are the main traditions for doing that work.",
+    "caveat": "The Rules Manual is explicit that naming theories is not required and not itself a sign of a good answer — “philosophical name-dropping is not a substitute for presenting a sound argument.” Use these lenses to find angles you would otherwise miss, then argue in plain language. If you do name a theory, be accurate: a judge may ask you about it.",
+    "lenses": [
+      {
+        "key": "consequentialist",
+        "name": "Consequentialism",
+        "tier": "core",
+        "summary": "Outcomes and impacts.",
+        "coreIdea": "The right action is the one that produces the best overall results. What matters morally is what actually happens to everyone affected, not the intentions behind the act or the rule it follows. Utilitarianism, the best-known version, says to maximize overall well-being and counts each person's interests equally.",
+        "keyQuestions": [
+          "Who is affected, and how much, under each option?",
+          "What are the likely outcomes in the short term and the long term?",
+          "How certain are those outcomes? What are the risks if we are wrong?",
+          "Which option produces the most benefit and the least harm overall?",
+          "Are there costs to people or beings we tend to overlook?"
+        ],
+        "thinkers": [
+          "Jeremy Bentham",
+          "John Stuart Mill",
+          "Peter Singer"
+        ],
+        "vocabulary": [
+          "utility",
+          "well-being",
+          "harm",
+          "cost-benefit",
+          "expected value",
+          "opportunity cost",
+          "greatest good for the greatest number"
+        ],
+        "strengths": [
+          "Takes real-world effects seriously and treats everyone's interests as counting.",
+          "Gives a way to compare options and make trade-offs.",
+          "Fits naturally with policy questions and limited resources."
+        ],
+        "limits": [
+          "Can justify sacrificing an individual or a minority for a larger gain.",
+          "Depends on predictions that are often uncertain.",
+          "Hard to measure and compare very different kinds of goods and harms."
+        ]
+      },
+      {
+        "key": "deontological",
+        "name": "Deontology",
+        "tier": "core",
+        "summary": "Rights and duties.",
+        "coreIdea": "Some actions are right or wrong in themselves, whatever their results. People have duties they must honor and rights that others may not violate, even for a good outcome. Kant's version holds that we must act only on principles we could will everyone to follow, and that we must never treat a person merely as a means to an end.",
+        "keyQuestions": [
+          "What duties are in play (honesty, promise-keeping, non-harm, fairness)?",
+          "Whose rights are at stake, and would any be violated?",
+          "Did the people involved give meaningful consent?",
+          "Is anyone being used merely as a tool for someone else's goal?",
+          "Could everyone act on this same principle without contradiction?"
+        ],
+        "thinkers": [
+          "Immanuel Kant",
+          "W. D. Ross",
+          "John Locke (natural rights)"
+        ],
+        "vocabulary": [
+          "duty",
+          "obligation",
+          "rights",
+          "consent",
+          "autonomy",
+          "dignity",
+          "universalizability",
+          "means versus ends",
+          "prima facie duties"
+        ],
+        "strengths": [
+          "Protects individuals from being sacrificed for the group.",
+          "Explains why consent, honesty, and promises matter in themselves.",
+          "Offers firm principles that do not depend on predicting the future."
+        ],
+        "limits": [
+          "Offers little guidance when two duties or two rights conflict.",
+          "Can seem rigid when following a rule leads to a terrible result.",
+          "People disagree about which rights and duties exist and where they come from."
+        ]
+      },
+      {
+        "key": "virtue",
+        "name": "Virtue Ethics",
+        "tier": "core",
+        "summary": "Character and values.",
+        "coreIdea": "Ethics is less about single acts and more about what kind of person (or community) one is becoming. The right action is what a person of good character would do in the situation. Virtues such as honesty, courage, compassion, justice, and practical wisdom are habits built through practice, and they are part of living a flourishing human life.",
+        "keyQuestions": [
+          "What would a wise, honest, compassionate person do here?",
+          "Which virtues does this situation call for, and which vices does it tempt?",
+          "What does this choice express about the person's character and motives?",
+          "What habits does this choice build over time?",
+          "Where is the reasonable middle between too much and too little (for example, between recklessness and cowardice)?"
+        ],
+        "thinkers": [
+          "Aristotle",
+          "Alasdair MacIntyre",
+          "Philippa Foot",
+          "Rosalind Hursthouse"
+        ],
+        "vocabulary": [
+          "character",
+          "virtue",
+          "vice",
+          "flourishing (eudaimonia)",
+          "practical wisdom (phronesis)",
+          "the mean",
+          "habit",
+          "integrity",
+          "role model"
+        ],
+        "strengths": [
+          "Captures the importance of motive, relationships, and moral growth.",
+          "Handles everyday, personal dilemmas that rules and calculations fit poorly.",
+          "Recognizes that good judgment depends on context."
+        ],
+        "limits": [
+          "Gives less specific guidance about what to do in a hard case.",
+          "Different cultures and traditions list and rank virtues differently.",
+          "“Do what a virtuous person would do” can feel circular."
+        ]
+      },
+      {
+        "key": "justice",
+        "name": "Social Justice",
+        "tier": "core",
+        "summary": "Fairness and equity.",
+        "coreIdea": "A decision should be judged by how it distributes benefits, burdens, power, and voice across groups in society. This lens looks past individual choices to the systems and histories that shape them, and it pays special attention to those who are least advantaged or who have been wronged in the past.",
+        "keyQuestions": [
+          "Who receives the benefits, and who bears the costs and risks?",
+          "Do the burdens fall on groups that are already disadvantaged?",
+          "Who has the power to decide, and who is left out of the decision?",
+          "What history or existing inequality shapes this situation?",
+          "Was the process fair, and did affected people have a real say?",
+          "Would we accept this arrangement if we did not know which position we would hold?"
+        ],
+        "thinkers": [
+          "John Rawls",
+          "Iris Marion Young",
+          "Amartya Sen",
+          "Martha Nussbaum"
+        ],
+        "vocabulary": [
+          "fairness",
+          "equity versus equality",
+          "distributive justice",
+          "procedural justice",
+          "structural injustice",
+          "the least advantaged",
+          "the veil of ignorance",
+          "power",
+          "representation",
+          "repair"
+        ],
+        "strengths": [
+          "Reveals patterns and power dynamics that case-by-case thinking misses.",
+          "Centers people who are often ignored in decision-making.",
+          "Connects present choices to historical context."
+        ],
+        "limits": [
+          "People hold competing ideas of what fairness requires (equal shares, need, merit, repair).",
+          "Group-level analysis can overlook differences among individuals within a group.",
+          "Fair distribution can conflict with individual liberty or with overall benefit."
+        ]
+      },
+      {
+        "key": "care",
+        "name": "Care Ethics",
+        "tier": "supplementary",
+        "summary": "Relationships and responsibility.",
+        "coreIdea": "Morality begins in relationships of care and dependence, not in abstract rules applied by detached individuals. We have special responsibilities to those who depend on us and to those we are connected with, and attentiveness to particular people's needs is itself a moral skill.",
+        "keyQuestions": [
+          "What relationships are at stake, and what do they require?",
+          "Who is vulnerable or dependent here, and who is responsible for them?",
+          "What response would best maintain trust and meet real needs?",
+          "Whose voice or experience has not been heard?"
+        ],
+        "thinkers": [
+          "Carol Gilligan",
+          "Nel Noddings",
+          "Virginia Held"
+        ],
+        "vocabulary": [
+          "care",
+          "dependence",
+          "vulnerability",
+          "responsiveness",
+          "attentiveness",
+          "trust",
+          "particularity"
+        ],
+        "strengths": [
+          "Takes family, friendship, and caregiving seriously as moral territory.",
+          "Attends to emotion and the specific people involved."
+        ],
+        "limits": [
+          "Gives less guidance about obligations to strangers and large-scale policy.",
+          "Can excuse favoritism toward those close to us."
+        ]
+      },
+      {
+        "key": "contract",
+        "name": "Social Contract / Contractualism",
+        "tier": "supplementary",
+        "summary": "Rules everyone could accept.",
+        "coreIdea": "Moral and political rules are legitimate when they are ones that free and equal people could agree to live under. An action is wrong if it is forbidden by principles that no one could reasonably reject. This lens is especially useful for questions about government authority, consent, and what members of a society owe one another.",
+        "keyQuestions": [
+          "Could this rule be justified to every person it affects?",
+          "Who could reasonably reject it, and on what grounds?",
+          "What have people actually or implicitly agreed to?",
+          "What makes this authority or decision legitimate?"
+        ],
+        "thinkers": [
+          "Thomas Hobbes",
+          "John Locke",
+          "Jean-Jacques Rousseau",
+          "T. M. Scanlon"
+        ],
+        "vocabulary": [
+          "consent of the governed",
+          "legitimacy",
+          "reciprocity",
+          "mutual justification",
+          "reasonable rejection",
+          "fair terms of cooperation"
+        ],
+        "strengths": [
+          "Explains political obligation and the importance of legitimacy.",
+          "Treats each person as someone to whom a justification is owed."
+        ],
+        "limits": [
+          "Leaves unclear what is owed to those who cannot take part in an agreement (animals, future generations, young children).",
+          "Real consent is often missing; hypothetical consent is open to dispute."
+        ]
+      }
+    ],
+    "usingWell": [
+      {
+        "head": "Frameworks are lenses, not answers.",
+        "text": "Each one brings certain features of a case into focus. None of them settles a case by itself."
+      },
+      {
+        "head": "Use more than one.",
+        "text": "A strong analysis shows what each lens reveals and where they agree or pull apart."
+      },
+      {
+        "head": "Name the conflict.",
+        "text": "The most interesting part of a case is often where frameworks disagree — the best overall outcome versus an individual's rights, say. Say which consideration should weigh more here, and why."
+      },
+      {
+        "head": "Lead with the case, not the label.",
+        "text": "Judges reward reasoning about the specific situation. “A consequentialist would say…” is weaker than explaining which outcomes matter in this case and to whom."
+      },
+      {
+        "head": "Stay open.",
+        "text": "Ethics Bowl rewards thoughtful exploration over winning. Acknowledge the strongest point on the other side and say what would change your mind."
+      }
+    ],
+    "comparison": [
+      {
+        "name": "Consequentialism",
+        "question": "What produces the best results for everyone affected?",
+        "focus": "Outcomes and impacts",
+        "tier": "core",
+        "key": "consequentialist"
+      },
+      {
+        "name": "Deontology",
+        "question": "What duties must I honor, and whose rights must I respect?",
+        "focus": "Rights and duties",
+        "tier": "core",
+        "key": "deontological"
+      },
+      {
+        "name": "Virtue Ethics",
+        "question": "What would a person of good character do?",
+        "focus": "Character and values",
+        "tier": "core",
+        "key": "virtue"
+      },
+      {
+        "name": "Social Justice",
+        "question": "Is this fair, especially to the least advantaged?",
+        "focus": "Fairness and equity",
+        "tier": "core",
+        "key": "justice"
+      },
+      {
+        "name": "Care Ethics",
+        "question": "What do my relationships and others' needs require?",
+        "focus": "Relationships and responsibility",
+        "tier": "supplementary",
+        "key": "care"
+      },
+      {
+        "name": "Social Contract",
+        "question": "Could everyone affected accept this rule?",
+        "focus": "Legitimacy and agreement",
+        "tier": "supplementary",
+        "key": "contract"
+      }
+    ]
+  },
+  "rulesSource": {
+    "manual": "NHSEB Rules Manual 2025-2026",
+    "caveat": "Rules below are taken from the 2025-2026 manual — the most recent published. Procedures are generally stable year to year, but dates and fees in that manual are last season's and are NOT used here. Re-check when NHSEB posts the 2026-2027 edition."
+  },
+  "matchSteps": [
+    "The moderator flips a coin. The winner chooses whether to present first (Team A) or second.",
+    "Cases and the question are handed out face down. Nobody — not even the judges — knows which case or question is coming.",
+    "The moderator reads the case title and the question only, never the whole case.",
+    "Team A confers for 2 minutes. Team B must stay silent but may take notes.",
+    "Team A presents for up to 5 (or 6) minutes. Any member may speak.",
+    "Team B confers for 2 minutes. Team A is silent.",
+    "Team B comments for up to 3 minutes.",
+    "Team A confers for 2 minutes. Team B is silent.",
+    "Team A responds for up to 3 minutes.",
+    "Judges confer briefly, then question Team A for up to 10 minutes.",
+    "Judges score, then the whole sequence repeats with a new case — teams swapping roles.",
+    "The moderator announces the winner by judges' votes, e.g. “two votes to one.”"
+  ],
+  "commentary": {
+    "headline": "Your job is to help the other team perfect their presentation — not to present your own.",
+    "points": [
+      "Comment on *their* answer: ask for clarification, point out contradictions or omissions, note what needs development.",
+      "Do not use this time to give your own analysis of the case. You get your own case in the other half.",
+      "Ask one to three insightful questions that target their main position, its implications, or a central issue they skipped.",
+      "A “question shower” — many rapid-fire questions meant to overwhelm — explicitly will not score well.",
+      "An excellent commentary may engage substantively without asking a single question."
+    ]
+  },
+  "responsePeriod": {
+    "headline": "You do not have to answer every question they raised.",
+    "points": [
+      "You are under no obligation to answer all of the other team's questions.",
+      "You should be able to answer the most crucial or morally pressing one or two.",
+      "Changing or modifying your position after hearing their commentary is not held against you — the manual calls it a sign of higher-order thinking. It is judged on its own merits."
+    ]
+  },
+  "whatWontHurtYou": [
+    "Whether one person speaks or everyone does. Judges are explicitly told to neither reward nor penalise either approach — pick what suits your team.",
+    "Not naming philosophers. The manual is blunt: referencing specific ethicists or theories is neither required nor a sign of a good answer. Many judges have no philosophy background and may not follow a reference to “Kantianism.”",
+    "Changing your mind mid-match, if the revised position is well-founded.",
+    "Staying seated — teams are encouraged to remain seated rather than stand."
+  ],
+  "rulesThatCatchTeamsOut": [
+    "No outside notes or materials in the room. Scratch paper is provided at the start and collected at the end.",
+    "No communication with your coach during a match — verbal, visual or written. Coaches are observers only.",
+    "You may bring your own timer, but it cannot store data or connect to the internet, and you may only time your own periods — never the other team's.",
+    "Substitutions happen between rounds, never during a match.",
+    "Only 5 students may be seated in any one match, though up to 7 can be registered.",
+    "You must actually answer the moderator's question — you are scored on how clearly and systematically you address it.",
+    "Note-passing is allowed while the other team speaks; talking is not. You may talk quietly while they confer."
+  ],
+  "timeSignals": [
+    "Presentation: warnings at 3 minutes and 1 minute remaining.",
+    "Commentary and Response: warning at 1 minute remaining.",
+    "Judges' Q&A: warning at 3 minutes remaining.",
+    "Once time expires you get about 10 seconds to finish your sentence.",
+    "Before the match the moderator asks whether you want signals spoken or given silently by hand."
+  ],
+  "teamRules": [
+    "A team is at least 3 and at most 7 registered students; only 5 may be seated in a given match.",
+    "Every team needs a coach or advisor approved by the school administration.",
+    "All members must be enrolled at the school during the semester of the Regional Competition.",
+    "A school competes in only one qualifying Regional per year, and must attend the closest in-state event.",
+    "Regional Organizers may cap how many teams one school can enter.",
+    "If we enter two teams, they may later combine into a single team of up to 7 for Divisional Playoffs or Nationals — but all members must have competed at the same Regional.",
+    "There is no limit on how much research you do beforehand. But facts alone do not score: you need sound arguments supported by facts."
+  ],
+  "preparationNote": "You will not know which case you are getting, or what question will be asked about it, until the moderator reads it out in the room. Every case in the set has to be prepared. The manual's own advice: ask “why is this case difficult?” — if it does not seem difficult, you are not probing deeply enough.",
+  "team": {
+    "note": null,
+    "members": []
+  }
+}
