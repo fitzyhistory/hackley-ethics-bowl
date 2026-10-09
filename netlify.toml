@@ -1,6 +1,6 @@
+# Static site — no build step. Netlify just serves the publish directory.
 [build]
   publish = "public"
-  command = ""
 
 [[headers]]
   for = "/*"
