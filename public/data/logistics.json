@@ -783,17 +783,18 @@
   "team": {
     "note": null,
     "members": [
-      { "name": "Ella", "cases": [] },
-      { "name": "Beatrix", "cases": [] },
-      { "name": "Charlie", "cases": [] },
-      { "name": "Shreyas", "cases": [] },
-      { "name": "Will", "cases": [] },
-      { "name": "Peter", "cases": [] },
-      { "name": "Theo", "cases": [] },
+      { "name": "Ella", "cases": ["12"] },
+      { "name": "Beatrix", "cases": ["09"] },
+      { "name": "Charlie", "cases": ["01"] },
+      { "name": "Shreyas", "cases": ["05"] },
+      { "name": "Will", "cases": ["08"] },
+      { "name": "Peter", "cases": ["06"] },
+      { "name": "Theo", "cases": ["03"] },
       { "name": "Max", "cases": [] },
       { "name": "Ryan", "cases": [] },
       { "name": "Matthew", "cases": [] },
-      { "name": "Lara", "cases": [] }
+      { "name": "Lara", "cases": ["02"] },
+      { "name": "Tyler", "cases": ["10"] }
     ],
     "squads": [
       { "name": "Team 1", "note": null, "members": [] },
