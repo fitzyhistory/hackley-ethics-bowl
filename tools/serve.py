@@ -8,7 +8,7 @@ will not work — browsers block those requests. Run this instead:
 import os, sys, http.server, socketserver
 
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public")
-PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8777
+PORT = int(sys.argv[1]) if len(sys.argv) > 1 else int(os.environ.get("PORT") or 8777)
 os.chdir(ROOT)
 
 socketserver.TCPServer.allow_reuse_address = True

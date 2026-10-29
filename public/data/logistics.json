@@ -782,6 +782,20 @@
   "preparationNote": "You will not know which case you are getting, or what question will be asked about it, until the moderator reads it out in the room. Every case in the set has to be prepared. The manual's own advice: ask “why is this case difficult?” — if it does not seem difficult, you are not probing deeply enough.",
   "team": {
     "note": null,
-    "members": []
+    "members": [
+      { "name": "Ella", "cases": [] },
+      { "name": "Beatrix", "cases": [] },
+      { "name": "Charlie", "cases": [] },
+      { "name": "Shreyas", "cases": [] },
+      { "name": "Will", "cases": [] },
+      { "name": "Peter", "cases": [] },
+      { "name": "Theo", "cases": [] },
+      { "name": "Max", "cases": [] },
+      { "name": "Ryan", "cases": [] }
+    ],
+    "squads": [
+      { "name": "Team 1", "note": null, "members": [] },
+      { "name": "Team 2", "note": null, "members": [] }
+    ]
   }
 }

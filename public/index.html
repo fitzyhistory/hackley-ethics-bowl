@@ -230,6 +230,32 @@ dl.contact dd small{color:var(--ink-3);display:block;font-size:13px}
 .warn{background:var(--surface-2);color:var(--ink-2);border-left:4px solid var(--hl);border-radius:0 6px 6px 0;
   padding:8px 12px;font-size:12.5px;margin-top:8px;font-weight:500}
 
+/* ---------- team ---------- */
+.card.person{cursor:default;gap:11px}
+.card.person:hover{border-color:var(--line);transform:none}
+.card.person .top{align-items:center}
+.card.person h3{font-family:var(--display);font-size:18px;font-weight:800;letter-spacing:-.02em}
+.rlabel{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);
+  margin-top:auto}
+.casebtn{display:flex;align-items:center;gap:9px;text-decoration:none;color:inherit;font-size:13.5px;
+  font-weight:560;line-height:1.35;background:var(--surface-2);border:1px solid var(--line);
+  border-radius:8px;padding:9px 11px;margin-top:5px}
+.casebtn+.casebtn{margin-top:6px}
+a.casebtn:hover{background:var(--surface);border-color:var(--accent)}
+.casebtn .cnum{font-family:var(--display);font-size:14px;font-weight:800;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;background:var(--hl);color:var(--hl-ink);border-radius:5px;
+  padding:1px 7px;flex:none}
+.casebtn.none{background:transparent;border-style:dashed;color:var(--ink-3);font-weight:450;font-style:italic}
+.squad{list-style:none;margin:14px 0 0;padding:0}
+.squad li{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);
+  font-size:14.5px}
+.squad li:last-child{border-bottom:none}
+.squad .seat{font-family:var(--display);font-size:12px;font-weight:800;color:var(--ink-3);
+  font-variant-numeric:tabular-nums;flex:none;min-width:16px}
+.squad .cnum{font-family:var(--display);font-size:12px;font-weight:800;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;background:var(--hl);color:var(--hl-ink);border-radius:5px;
+  padding:1px 6px;margin-left:auto;flex:none;text-decoration:none}
+
 footer.site{border-top:3px solid var(--hl);padding:22px 0 40px;color:var(--ink-3);font-size:12.5px;line-height:1.6}
 footer.site a{color:var(--ink-3)}
 .hide{display:none!important}
@@ -562,17 +588,75 @@ function viewFrameworks(){
     ${f.usingWell.map(x=>`<div class="entry"><p><b>${esc(x.head)}</b> ${esc(x.text)}</p></div>`).join("")}</div>`;
 }
 
+/* "3" and 3 both mean case 03; anything else is passed through as written */
+const normSlug = v => {
+  const s=String(v??"").trim();
+  return /^\d+$/.test(s) ? String(+s).padStart(2,"0") : s;
+};
+const sameName = (a,b) =>
+  String(a??"").trim().toLowerCase()===String(b??"").trim().toLowerCase();
+
+/* A case can be assigned from either side — "expert" on the case, or the
+   member's "cases" list. Both end up here. */
+function casesFor(name){
+  const member=(LOG.team.members||[]).find(m=>sameName(m.name,name));
+  const slugs=new Set((member?.cases||[]).map(normSlug));
+  CASES.forEach(c=>{ if(sameName(c.expert,name)) slugs.add(c.slug); });
+  return CASES.filter(c=>slugs.has(c.slug));
+}
+
+/* Fill a case's "expert" from the roster when only the roster side is set,
+   so the case pages agree with the Team page. */
+function linkRosterToCases(){
+  const owner=new Map();
+  ((LOG.team||{}).members||[]).forEach(m=>
+    (m.cases||[]).forEach(n=>owner.set(normSlug(n), m.name)));
+  CASES.forEach(c=>{ if(!c.expert && owner.has(c.slug)) c.expert=owner.get(c.slug); });
+}
+
 function viewTeam(){
-  const t=LOG.team;
+  const t=LOG.team, members=t.members||[], squads=t.squads||[];
+
+  const caseBox = m => {
+    const cs=casesFor(m.name);
+    if(!cs.length) return `<span class="casebtn none">Not assigned yet</span>`;
+    return cs.map(c=>`<a class="casebtn" href="#/case/${c.slug}">
+      <span class="cnum">${c.slug}</span><span>${esc(c.title)}</span></a>`).join("");
+  };
+
+  const squadPanel = s => {
+    const names=s.members||[];
+    return `<div class="panel"><h2>${esc(s.name)}</h2>
+      ${s.note?`<p class="attrib" style="margin:0">${esc(s.note)}</p>`:""}
+      ${names.length
+        ? `<ul class="squad">${names.map((n,i)=>{
+             const c=casesFor(n)[0];
+             return `<li><span class="seat">${i+1}</span><span>${esc(n)}</span>
+               ${c?`<a class="cnum" href="#/case/${c.slug}" title="${esc(c.title)}">${c.slug}</a>`:""}</li>`;
+           }).join("")}</ul>
+           <p class="attrib" style="margin:12px 0 0">${names.length} student${names.length===1?"":"s"}.</p>`
+        : `<p class="empty-note" style="margin:0">Not set yet.</p>`}</div>`;
+  };
+
   return `
   <h1 class="page">Team</h1>
-  ${t.members.length
-    ? `<div class="grid">${t.members.map(m=>`<div class="card" style="cursor:default">
+  <p class="lede">${members.length} student${members.length===1?"":"s"} on the roster.</p>
+  ${t.note?`<div class="openq"><h2>Note</h2><p style="margin:0">${esc(t.note)}</p></div>`:""}
+
+  <h2 class="grouphead">Roster</h2>
+  <p class="attrib" style="margin:0 0 12px">Assigned case links to that case page once it is set.</p>
+  ${members.length
+    ? `<div class="grid">${members.map(m=>`<div class="card person">
          <div class="top"><h3>${esc(m.name)}</h3></div>
-         <div class="who">${m.cases&&m.cases.length
-            ? `Cases: ${m.cases.map(n=>`<b>${esc(n)}</b>`).join(", ")}`
-            : "No case assigned yet"}</div></div>`).join("")}</div>`
-    : `<div class="panel"><p class="empty-note" style="margin:0">Team members to be added.</p></div>`}`;
+         <div class="rlabel">Assigned case</div>
+         ${caseBox(m)}</div>`).join("")}</div>`
+    : `<div class="panel"><p class="empty-note" style="margin:0">Team members to be added.</p></div>`}
+
+  <h2 class="grouphead">Competition Teams</h2>
+  <p class="attrib" style="margin:0 0 12px">Up to 5 students are seated in a match.</p>
+  ${squads.length
+    ? `<div class="two">${squads.map(squadPanel).join("")}</div>`
+    : `<div class="panel"><p class="empty-note" style="margin:0">Not set yet.</p></div>`}`;
 }
 
 function viewLogistics(){
@@ -676,6 +760,7 @@ async function boot(){
       grab("data/cases.json"), grab("data/logistics.json")
     ]);
     CASES = cases; LOG = logistics;
+    linkRosterToCases();
     document.getElementById("foot").innerHTML =
       `${esc(LOG.attribution)}<br>Updated ${esc(LOG.lastUpdated)} · ` +
       `<a href="https://nhseb.org/" target="_blank" rel="noopener">nhseb.org</a>`;

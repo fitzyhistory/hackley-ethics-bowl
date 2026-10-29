@@ -37,6 +37,7 @@ boundary is the protection.
 |---|---|---|
 | Student work on a case | `public/data/cases.json` | commit + push |
 | Team roster | `public/data/logistics.json` → `team.members` | commit + push |
+| Who is on Team 1 / Team 2 | `public/data/logistics.json` → `team.squads` | commit + push |
 | An image for the site (logo, banner) | `public/img/` | reference it as `img/name.png` |
 | A new NHSEB document to link | `public/docs/` + add to `logistics.json` → `documents` | commit + push |
 | **Your own case analysis** | `../Cases/Case Analysis/` — **outside the repo** | nothing; it stays private |
@@ -92,8 +93,31 @@ section. Every entry takes a `who` and `when` so the page can attribute it:
 Set `"expert": "Maya"` on the case and the page switches from "No student assigned yet" to
 her name, and empty sections read "Awaiting Maya's submission".
 
-**The team roster** — `logistics.json` → `team.members`:
-`[{ "name": "Maya", "cases": ["01", "07"] }]`. First names only.
+**The team roster** — `logistics.json` → `team.members`. First names only:
+
+```json
+"members": [ { "name": "Ella", "cases": ["03"] }, { "name": "Beatrix", "cases": [] } ]
+```
+
+Each name gets a card on the Team page with an **Assigned case** box under it. Empty `cases`
+reads "Not assigned yet"; fill it in and the box becomes a button linking to that case page.
+`"3"` and `"03"` both work. More than one case per student is fine — each gets its own button.
+
+Assignment works from either side and the two stay in step: put the slug in the student's
+`cases`, **or** set `"expert": "Ella"` on the case in `cases.json`. Either way the Team page
+shows the case and the case page shows the student. Pick one habit and stay with it.
+
+**Team 1 and Team 2** — `logistics.json` → `team.squads`. Names from the roster, in seat order:
+
+```json
+"squads": [
+  { "name": "Team 1", "note": null, "members": ["Ella", "Beatrix", "Charlie"] },
+  { "name": "Team 2", "note": null, "members": [] }
+]
+```
+
+Empty reads "Not set yet". Each name shows its assigned case number beside it. `note` takes a
+line of text under the heading if one is needed. A third team is just a third entry in the list.
 
 **Presentation length** — `logistics.json` → `matchFormat`. Regionals run 5 minutes but the
 organizer may extend to 6; Divisionals and Nationals are always 6. Once Connor confirms, set
