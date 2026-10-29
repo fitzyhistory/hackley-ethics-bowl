@@ -792,7 +792,8 @@
       { "name": "Theo", "cases": [] },
       { "name": "Max", "cases": [] },
       { "name": "Ryan", "cases": [] },
-      { "name": "Matthew", "cases": [] }
+      { "name": "Matthew", "cases": [] },
+      { "name": "Lara", "cases": [] }
     ],
     "squads": [
       { "name": "Team 1", "note": null, "members": [] },
